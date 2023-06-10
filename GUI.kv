@@ -1,0 +1,32 @@
+MDScreen:
+
+    name: "scr 1"
+
+    MDBoxLayout:
+
+        orientation: 'vertical'
+
+        MDTopAppBar:
+
+            pos_hint: {"top": 1}
+            title: "Music Player"
+            halign:"center"
+            right_action_items: [["folder", lambda x: app.file_manager_open()]]
+            elevation: 3
+        
+        MDScrollView:
+
+            id: SongScroll
+            
+            MDList:
+
+                id: SongList
+
+        MDTopAppBar:
+        
+            id:songname
+            title:""
+            elevation: 3
+            left_action_items: [["music"]]
+            right_action_items: [["skip-previous", lambda x: app.playpri()], ["play", lambda x: app.Play_Music()],["skip-next", lambda x: app.playnext()]]
+     
